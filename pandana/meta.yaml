@@ -47,6 +47,8 @@ test:
   # Python imports
   imports:
     - pandana
+    - pandana.network
+    - pandana._pyaccess
 
   #commands:
     # You can put test commands to be run here.  Use this to test that the
