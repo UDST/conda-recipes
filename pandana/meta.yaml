@@ -1,11 +1,11 @@
 package:
   name: pandana
-  version: !!str 0.1
+  version: !!str 0.1.1
 
 source:
-  fn: pandana-0.1.zip
-  url: https://pypi.python.org/packages/source/p/pandana/pandana-0.1.zip
-  md5: d9d839fd8deadc816ed61382f7cdb690
+  fn: pandana-0.1.1.zip
+  url: https://pypi.python.org/packages/source/p/pandana/pandana-0.1.1.zip
+  md5: d9b28174164cec8d2be08f7937a08698
 #  patches:
    # List any patch files here
    # - fix.patch
