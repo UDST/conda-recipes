@@ -5,7 +5,7 @@ package:
 source:
   fn: pandana-0.1.2.zip
   url: https://pypi.python.org/packages/source/p/pandana/pandana-0.1.2.zip
-  md5: 44711fa96648c4b1ff9d2978ab14f273
+  md5: 0c68b49285893e8a80ca7bc30784d72d
 #  patches:
    # List any patch files here
    # - fix.patch
