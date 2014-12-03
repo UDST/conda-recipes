@@ -1,11 +1,11 @@
 package:
   name: urbansim
-  version: !!str 1.1
+  version: !!str 1.2
 
 source:
-  fn: urbansim-1.1.zip
-  url: https://pypi.python.org/packages/source/u/urbansim/urbansim-1.1.zip
-  md5: 00040a0ef41544b948376f1f31684bac
+  fn: urbansim-1.2.zip
+  url: https://pypi.python.org/packages/source/u/urbansim/urbansim-1.2.zip
+  md5: c9935d48cc7623ca4831cdbb876b6091
 #  patches:
    # List any patch files here
    # - fix.patch
