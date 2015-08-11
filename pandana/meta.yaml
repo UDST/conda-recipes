@@ -63,7 +63,7 @@ test:
     # - nose
 
 about:
-  home: http://synthicity.github.io/pandana/
+  home: https://udst.github.io/pandana/
   license:  GNU Affero General Public License v3
   summary: 'Pandas Network Analysis - dataframes of network queries, quickly'
 

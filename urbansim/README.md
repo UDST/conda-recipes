@@ -1,2 +1,2 @@
-Recipe for building [UrbanSim](http://synthicity.github.io/urbansim)
+Recipe for building [UrbanSim](https://udst.github.io/urbansim)
 with [conda](http://conda.pydata.org/).

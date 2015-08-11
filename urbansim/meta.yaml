@@ -83,7 +83,7 @@ test:
     # - nose
 
 about:
-  home: https://github.com/synthicity/urbansim
+  home: https://github.com/udst/urbansim
   license:  BSD License
   summary: 'Tool for modeling metropolitan real estate markets'
 
