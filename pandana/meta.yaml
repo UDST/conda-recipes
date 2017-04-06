@@ -1,11 +1,11 @@
 package:
   name: pandana
-  version: !!str 0.2.0
+  version: !!str 0.3.0
 
 source:
-  fn: pandana-0.2.0.zip
-  url: https://pypi.python.org/packages/source/p/pandana/pandana-0.2.0.zip
-  md5: 1cfd50ca505cb7629fa143a533f41d02
+  fn: pandana-0.3.0.tar.gz
+  url: https://pypi.python.org/packages/59/72/24bd6d5203774c24a84daaafa388b719d9cf49cd80467085cda2b4762742/pandana-0.3.0.tar.gz#md5=d685192b1a2926ec6a8d27e394a82170
+  md5: d685192b1a2926ec6a8d27e394a82170
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -37,6 +37,7 @@ requirements:
     - pandas >=0.13.1
     - pytables >=3.1.0
     - requests >=2.0
+    - osmnet >=0.1.3
 
   run:
     - python
@@ -48,6 +49,7 @@ requirements:
     - pandas >=0.13.1
     - pytables >=3.1.0
     - requests >=2.0
+    - osmnet >=0.1.3
 
 test:
   # Python imports
