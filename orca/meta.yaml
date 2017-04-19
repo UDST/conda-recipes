@@ -1,18 +1,19 @@
 package:
   name: orca
-  version: "1.0.0"
+  version: "1.4.0"
 
 source:
-  fn: orca-1.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/o/orca/orca-1.0.0.tar.gz
-  md5: 4dcc1d2df2fc327036dfc5e89dbd4104
+  fn: orca-1.4.0.tar.gz
+  url: https://pypi.python.org/packages/bb/6b/edfebe4e198f019e36f5b69108fad807917d62c7d6de09b57f1cdf57f895/orca-1.4.0.tar.gz
+  md5: 07b67402ed9cb672acb1a2d67e63cb28
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
+  # noarch_python: True
   # preserve_egg_dir: True
-  # entry_points:
+  entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
@@ -20,6 +21,7 @@ source:
     #
     # Would create an entry point called orca that calls orca.main()
 
+    - orca-server = orca.server.server:main [server]
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -29,28 +31,34 @@ requirements:
   build:
     - python
     - setuptools
-    - cytoolz >=0.7.0
-    - pandas >=0.13.1
+    - pandas >=0.15.0
     - pytables >=3.1.0
+    - toolz >=0.7.0
     - zbox >=1.2
+    - pygments >=2.0
+    - flask >=0.10
 
   run:
     - python
-    - cytoolz >=0.7.0
-    - pandas >=0.13.1
+    - pandas >=0.15.0
     - pytables >=3.1.0
+    - toolz >=0.7.0
     - zbox >=1.2
+    - pygments >=2.0
+    - flask >=0.10
 
 test:
   # Python imports
   imports:
     - orca
+    - orca.server
     - orca.utils
 
-  # commands:
+  commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
+    - orca-server --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -60,9 +68,10 @@ test:
     # - nose
 
 about:
-  home: https://udst.github.io/orca/
+  home: https://github.com/udst/orca
   license: BSD License
   summary: 'A pipeline orchestration tool with Pandas support'
+  license_family: BSD
 
 # See
 # http://docs.continuum.io/conda/build.html for
