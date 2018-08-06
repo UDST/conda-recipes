@@ -1,0 +1,43 @@
+{% set name = "osmnet" %}
+{% set version = "0.1.5" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  fn: osmnet-0.1.5.tar.gz
+  url: https://files.pythonhosted.org/packages/f6/80/5a96cfe00a1ceeb17ed5d70246ce9e7336fad9d09dc067961b96f182729b/osmnet-0.1.5.tar.gz
+  sha256: 2fb96a7a95e34af45d1b8c5f88705da6876143820781220b1f55adf1f242639e
+
+#build:
+#  number: 0
+#  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+
+requirements:
+  host:
+    - geopandas >=0.2.1
+    - numpy >=1.10
+    - pandas >=0.16.0
+    - pip
+    - pip
+    - python
+    - requests >=2.9.1
+    - shapely >=1.5
+  run:
+    - geopandas >=0.2.1
+    - numpy >=1.10
+    - pandas >=0.16.0
+    - python
+    - requests >=2.9.1
+    - shapely >=1.5
+
+test:
+  imports:
+    - osmnet
+
+about:
+  home: https://github.com/UDST/osmnet
+  license: GNU Affero General Public v3
+  license_family: AGPL
+  summary: Tools for the extraction of OpenStreetMap street network data for use in Pandana accessibility analyses.
