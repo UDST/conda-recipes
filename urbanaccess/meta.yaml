@@ -13,30 +13,35 @@ source:
 
 requirements:
   build:
-    - geopy >=1.11.0
-    - matplotlib >=2.0
-    - numpy >=1.11
-    - osmnet >=0.1.4
-    - pandana >=0.2.0
-    - pandas >=0.17.0
     - pip
     - python
-    - pyyaml >=3.11
-    - requests >=2.9.1
-    - scikit-learn >=0.17.1
-    - click>=3.0
-  run:
+    - setuptools
+    - python-dateutil >=2.6.1
+    - pytz >=2016.10
     - geopy >=1.11.0
     - matplotlib >=2.0
     - numpy >=1.11
     - osmnet >=0.1.4
     - pandana >=0.2.0
     - pandas >=0.17.0
-    - python
     - pyyaml >=3.11
     - requests >=2.9.1
     - scikit-learn >=0.17.1
-    - click>=3.0
+    - click >=3.0
+  run:
+    - python
+    - python-dateutil >=2.6.1
+    - pytz >=2016.10
+    - geopy >=1.11.0
+    - matplotlib >=2.0
+    - numpy >=1.11
+    - osmnet >=0.1.4
+    - pandana >=0.2.0
+    - pandas >=0.17.0
+    - pyyaml >=3.11
+    - requests >=2.9.1
+    - scikit-learn >=0.17.1
+    - click >=3.0
 
 test:
   imports:
