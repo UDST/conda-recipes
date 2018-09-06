@@ -1,11 +1,11 @@
 package:
   name: pandana
-  version: !!str 0.3.0
+  version: !!str 0.4.1
 
 source:
-  fn: pandana-0.3.0.tar.gz
-  url: https://pypi.python.org/packages/59/72/24bd6d5203774c24a84daaafa388b719d9cf49cd80467085cda2b4762742/pandana-0.3.0.tar.gz#md5=d685192b1a2926ec6a8d27e394a82170
-  md5: d685192b1a2926ec6a8d27e394a82170
+  fn: pandana-0.4.1.tar.gz
+  url: https://files.pythonhosted.org/packages/68/a6/2ac42b85ea5353370d40abde239493149a2a1974143881ff5c7208429daa/pandana-0.4.1.tar.gz
+  sha256: bcdedb4eb21da0d1012e76c8af6ad2c31124bbcfc40274ab40ecbe0119560abd
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -29,6 +29,7 @@ requirements:
   build:
     - python
     - setuptools
+    - cython >=0.25.2
     - brewer2mpl >=1.4
     - matplotlib >=1.3.1
     - mock
@@ -38,9 +39,14 @@ requirements:
     - pytables >=3.1.0
     - requests >=2.0
     - osmnet >=0.1.3
-
+    - scikit-learn >=0.18.1
+    - hdf5 >=1.8.0
+    - geopandas >=0.2.1
+    - hdf5 >=1.8.0
   run:
     - python
+    - setuptools
+    - cython >=0.25.2
     - brewer2mpl >=1.4
     - matplotlib >=1.3.1
     - mock
@@ -50,13 +56,16 @@ requirements:
     - pytables >=3.1.0
     - requests >=2.0
     - osmnet >=0.1.3
+    - scikit-learn>=0.18.1
+    - hdf5 >=1.8.0
+    - geopandas >=0.2.1
 
 test:
   # Python imports
   imports:
     - pandana
     - pandana.network
-    - pandana._pyaccess
+    - pandana.cyaccess
 
   #commands:
     # You can put test commands to be run here.  Use this to test that the
