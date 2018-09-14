@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$PYTHON -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv  
+$PYTHON -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 # Add more build steps here, if they are necessary.
 
