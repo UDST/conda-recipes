@@ -1,5 +1,5 @@
 {% set name = "urbanaccess" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b2d7905a42b896923508b4419b0809b1494eb5c5f0c5c62998df6ff8c6a3fd92
+  sha256: 864e350fced5b80040de6052ce78ea84361d07516cb18d1d6d9159f5307cce27
 
 #build:
 #  number: 0
@@ -19,24 +19,25 @@ requirements:
     - matplotlib >=2.0
     - numpy >=1.11
     - osmnet >=0.1.4
-    - pandana =0.3.0
+    - pandana >=0.2.0
     - pandas >=0.17.0
-    - pip
     - pip
     - python
     - pyyaml >=3.11
     - requests >=2.9.1
+    - six >=1.11
     - scikit-learn >=0.17.1
   run:
     - geopy >=1.11.0
     - matplotlib >=2.0
     - numpy >=1.11
     - osmnet >=0.1.4
-    - pandana =0.3.0
+    - pandana >=0.2.0
     - pandas >=0.17.0
     - python
     - pyyaml >=3.11
     - requests >=2.9.1
+    - six >=1.11
     - scikit-learn >=0.17.1
 
 test:
@@ -53,4 +54,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - 13947822
+    - ngoldenberg
