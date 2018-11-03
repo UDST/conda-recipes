@@ -1,0 +1,48 @@
+{% set name = "synthpop" %}
+{% set version = "0.1.dev0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  fn: SynthPop-0.1.dev0.tar.gz
+#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/1a/34/d7a16de8ca131e64f8da198e884acc7a0a900646831d145a4c3aad310a10/SynthPop-0.1.dev0.tar.gz
+  sha256: d16987fcef31e27a5796f561570b1a6822b5be902508fa4461230a8ff74e6f9f
+
+#build:
+#  number: 0
+#  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - ez_setup >=0.9
+    - census >=0.5
+    - numexpr >=2.3.1
+    - numpy >=1.8.0
+    - pandas >=0.15.0
+    - scipy >=0.13.3
+    - us >=0.8
+  run:
+    - python
+    - setuptools
+    - ez_setup >=0.9
+    - census >=0.5
+    - numexpr >=2.3.1
+    - numpy >=1.8.0
+    - pandas >=0.15.0
+    - scipy >=0.13.3
+    - us >=0.8
+
+test:
+  imports:
+    - synthpop
+
+about:
+  home: https://github.com/UDST/synthpop
+  license: BSD License
+  license_family: BSD
+  summary: 'Synthetic populations from census data'
