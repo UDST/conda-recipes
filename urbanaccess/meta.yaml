@@ -1,0 +1,57 @@
+{% set name = "urbanaccess" %}
+{% set version = "0.2.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 864e350fced5b80040de6052ce78ea84361d07516cb18d1d6d9159f5307cce27
+
+#build:
+#  number: 0
+#  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+
+requirements:
+  host:
+    - geopy >=1.11.0
+    - matplotlib >=2.0
+    - numpy >=1.11
+    - osmnet >=0.1.4
+    - pandana >=0.2.0
+    - pandas >=0.17.0
+    - pip
+    - python
+    - pyyaml >=3.11
+    - requests >=2.9.1
+    - six >=1.11
+    - scikit-learn >=0.17.1
+  run:
+    - geopy >=1.11.0
+    - matplotlib >=2.0
+    - numpy >=1.11
+    - osmnet >=0.1.4
+    - pandana >=0.2.0
+    - pandas >=0.17.0
+    - python
+    - pyyaml >=3.11
+    - requests >=2.9.1
+    - six >=1.11
+    - scikit-learn >=0.17.1
+
+test:
+  imports:
+    - urbanaccess
+    - urbanaccess.gtfs
+    - urbanaccess.osm
+
+about:
+  home: https://github.com/UDST/urbanaccess
+  license: GNU Affero General Public v3
+  summary: A tool for creating GTFS transit and OSM pedestrian networks for use in Pandana accessibility analyses.
+
+
+extra:
+  recipe-maintainers:
+    - ngoldenberg
